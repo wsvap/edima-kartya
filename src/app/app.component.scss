@@ -1,0 +1,160 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 368px;
+  height: 239px;
+
+  .card {
+  }
+
+  .card-front {
+    position: relative;
+    width: 368px;
+    height: 239px;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.82);
+    background: url("../assets/images/card-front.jpg");
+
+    .card-number {
+      position: absolute;
+      left: 42px;
+      bottom: 69px;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 4px;
+    }
+
+    .card-number {
+      position: absolute;
+      left: 42px;
+      bottom: 65px;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 5px;
+    }
+
+    .card-owner {
+      position: absolute;
+      left: 44px;
+      bottom: 35px;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 3px;
+    }
+
+    .card-exp {
+      position: absolute;
+      right: 43px;
+      bottom: 35px;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+.form-container {
+  position: relative;
+  width: 640px;
+  margin-top: 119px;
+  padding: 172px 51px 71px 51px;
+  border-radius: 17px;
+  background-color: #fff;
+  box-shadow: 0 0 59px 6px rgba(0, 0, 0, 0.08);
+
+  .form-row {
+    margin-bottom: 30px;
+
+    &.card-exp {
+      input[type="text"] {
+        width: 123px;
+      }
+
+      span {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 36px;
+        line-height: 57px;
+        font-weight: 300;
+        vertical-align: -4px;
+      }
+    }
+
+    &.card-cvv {
+      input[type="text"] {
+        width: 150px;
+      }
+    }
+  }
+
+  .form-row-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  label {
+    display: block;
+    margin-left: 2px;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    height: 57px;
+    padding: 0 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 55px;
+    color: #646566;
+    border: 1px solid #e0e3e5;
+    border-radius: 3px;
+    box-shadow: inset 4px 4px 18px 0 rgba(0, 0, 0, 0.07);
+    outline: none;
+    transition: all .2s;
+
+    &:hover {
+      border-color: #bbbec0;
+    }
+    &:focus {
+      border-color: #182c48;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 57px;
+    margin-top: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 55px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #a5bf39;
+    border-radius: 3px;
+    background-color: #a5bf39;
+    outline: none;
+    transition: all .2s;
+
+    &:hover {
+      border-color: #798e21;
+      background-color: #9fb836;
+    }
+    &:focus {
+      border-color: #182c48;
+      background-color: #96ae30;
+    }
+  }
+
+}
