@@ -19,26 +19,26 @@
 
       <div class="form-row">
         <label for="cardNumber">Kártyaszám</label>
-        <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber">
+        <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" maxlength="16">
       </div>
 
       <div class="form-row">
         <label for="cardOwner">Kártyabirtokos neve</label>
-        <input type="text" id="cardOwner" name="cardOwner" [(ngModel)]="cardOwner">
+        <input type="text" id="cardOwner" name="cardOwner" [(ngModel)]="cardOwner" maxlength="32">
       </div>
 
       <div class="form-row-columns">
         <div class="form-row card-exp">
           <label for="cardExpYear">Lejárati dátum</label>
-          <input type="text" id="cardExpYear" name="cardExpYear" [(ngModel)]="cardExpYear">
+          <input type="text" id="cardExpYear" name="cardExpYear" [(ngModel)]="cardExpYear" maxlength="2">
           <span>/</span>
-          <input type="text" id="cardExpMonth" name="cardExpMonth" [(ngModel)]="cardExpMonth">
+          <input type="text" id="cardExpMonth" name="cardExpMonth" [(ngModel)]="cardExpMonth" maxlength="2">
         </div>
 
         <div class="form-row card-cvv">
           <label for="cardCVV">CVV</label>
           <input type="text" id="cardCVV" name="cardCVV" [(ngModel)]="cardCVV" (focus)="onCVVFocus()"
-                 (blur)="onCVVBlur()">
+                 (blur)="onCVVBlur()" maxlength="3">
         </div>
       </div>
 
