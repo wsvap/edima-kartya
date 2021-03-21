@@ -5,41 +5,41 @@
     <div class="card-container">
 
       <div class="card-front">
-        <div class="card-number">1234  5678  9101  1121</div>
-        <div class="card-owner">Edimat Eszter</div>
-        <div class="card-exp">09/23</div>
+        <div class="card-number">{{cardNumber}}</div>
+        <div class="card-owner">{{cardOwner}}</div>
+        <div class="card-exp">{{cardExpYear}}/{{cardExpMonth}}</div>
       </div>
     </div>
 
     <form action="">
 
       <div class="form-row">
-        <label for="card-number">Kártyaszám</label>
-        <input type="text" id="card-number">
+        <label for="cardNumber">Kártyaszám</label>
+        <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber">
       </div>
 
       <div class="form-row">
-        <label for="card-owner">Kártyabirtokos neve</label>
-        <input type="text" id="card-owner">
+        <label for="cardOwner">Kártyabirtokos neve</label>
+        <input type="text" id="cardOwner" name="cardOwner" [(ngModel)]="cardOwner">
       </div>
 
       <div class="form-row-columns">
         <div class="form-row card-exp">
-          <label for="card-exp-year">Lejárati dátum</label>
-          <input type="text" id="card-exp-year">
+          <label for="cardExpYear">Lejárati dátum</label>
+          <input type="text" id="cardExpYear" name="cardExpYear" [(ngModel)]="cardExpYear">
           <span>/</span>
-          <input type="text" id="card-exp-month">
+          <input type="text" id="cardExpMonth" name="cardExpMonth" [(ngModel)]="cardExpMonth">
         </div>
 
         <div class="form-row card-cvv">
-          <label for="card-cvv">CVV</label>
-          <input type="text" id="card-cvv">
+          <label for="cardCVV">CVV</label>
+          <input type="text" id="cardCVV" name="cardCVV" [(ngModel)]="cardCVV">
         </div>
       </div>
 
       <div class="form-row">
-        <label for="card-phone">Telefonszám</label>
-        <input type="text" id="card-phone">
+        <label for="cardPhone">Telefonszám</label>
+        <input type="text" id="cardPhone" name="cardPhone" [(ngModel)]="cardPhone">
       </div>
 
       <div class="buttons">
