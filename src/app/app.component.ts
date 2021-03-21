@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
 
   focusCVV = false;
 
+
   ngOnInit(): void {
   }
 
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit {
   onCVVFocus(): void {
     this.focusCVV = true;
   }
+
   onCVVBlur(): void {
     this.focusCVV = false;
   }
