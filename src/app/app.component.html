@@ -3,11 +3,15 @@
   <div class="form-container">
 
     <div class="card-container">
-
-      <div class="card-front">
-        <div class="card-number">{{cardNumber}}</div>
-        <div class="card-owner">{{cardOwner}}</div>
-        <div class="card-exp">{{cardExpYear}}/{{cardExpMonth}}</div>
+      <div class="card" [class.is-flipped]="focusCVV">
+        <div class="card-front">
+          <div class="card-number">{{cardNumber}}</div>
+          <div class="card-owner">{{cardOwner}}</div>
+          <div class="card-exp">{{cardExpYear}}/{{cardExpMonth}}</div>
+        </div>
+        <div class="card-back">
+          <div class="card-cvv">{{cardCVV}}</div>
+        </div>
       </div>
     </div>
 
@@ -33,7 +37,8 @@
 
         <div class="form-row card-cvv">
           <label for="cardCVV">CVV</label>
-          <input type="text" id="cardCVV" name="cardCVV" [(ngModel)]="cardCVV">
+          <input type="text" id="cardCVV" name="cardCVV" [(ngModel)]="cardCVV" (focus)="onCVVFocus()"
+                 (blur)="onCVVBlur()">
         </div>
       </div>
 

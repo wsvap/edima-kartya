@@ -1,12 +1,11 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'edima-kartya';
   cardNumber: number | undefined;
   cardOwner = '';
@@ -15,7 +14,17 @@ export class AppComponent {
   cardCVV: number | undefined;
   cardPhone: number | undefined;
 
+  focusCVV = false;
 
+  ngOnInit(): void {
+  }
 
+  // Card flip on CVV focus
+  onCVVFocus(): void {
+    this.focusCVV = true;
+  }
+  onCVVBlur(): void {
+    this.focusCVV = false;
+  }
 
 }

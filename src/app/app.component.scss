@@ -15,16 +15,28 @@
   height: 239px;
 
   .card {
+    width: 368px;
+    height: 239px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 9px 9px 45px 0 rgba(0, 0, 0, 0.35);
+
+    &.is-flipped {
+      transform: rotateY(180deg);
+    }
   }
 
-  .card-front {
-    position: relative;
+  .card-front,
+  .card-back {
+    position: absolute;
     width: 368px;
     height: 239px;
     font-family: 'Bebas Neue', cursive;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.82);
-    background: url("../assets/images/card-front.jpg");
+    border-radius: 3px;
+    background: url("../assets/images/card-front.png") no-repeat left top;
+    backface-visibility: hidden;
 
     .card-number {
       position: absolute;
@@ -61,6 +73,22 @@
       line-height: 16px;
       letter-spacing: 3px;
     }
+
+    .card-cvv {
+      position: absolute;
+      right: 38px;
+      bottom: 132px;
+      font-size: 18px;
+      color: #000;
+      line-height: 16px;
+      letter-spacing: 3px;
+      text-shadow: none;
+    }
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    background: url("../assets/images/card-back.png") no-repeat left top;
   }
 }
 
@@ -127,6 +155,7 @@
     &:hover {
       border-color: #bbbec0;
     }
+
     &:focus {
       border-color: #182c48;
     }
@@ -151,6 +180,7 @@
       border-color: #798e21;
       background-color: #9fb836;
     }
+
     &:focus {
       border-color: #182c48;
       background-color: #96ae30;
